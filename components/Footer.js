@@ -6,7 +6,7 @@ export default function Footer() {
       <a href="https://www.youtube.com/c/KarthikVinod9" target="_blank">
         <i className="fa-brands fa-youtube duration-300 hover:opacity-30 cursor-pointer"></i>
       </a>
-      <h1 className="text-sm sm:text-base ">Established by Karthik Vinod</h1>
+      <h1 className="text-sm sm:text-base ">Established by Karthik Vinod 🙂 </h1>
     </div>
   );
 }
