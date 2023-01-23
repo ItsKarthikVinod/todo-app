@@ -10,7 +10,7 @@ export default function Home() {
   return (
     < >
       <Head>
-        <title>Todo app</title>
+        <title>UpToDate - Never Miss</title>
         <meta name="description" content="made by Karthik Vinod" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

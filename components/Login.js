@@ -40,14 +40,14 @@ export default function Login() {
         onChange={(e) => setEmail(e.target.value)}
         type="text"
         placeholder="Email Address"
-        className="outline-none duration-300 border-b-4 border-solid border-white focus:border-cyan-300 text-slate-900 p-3 w-full max-w-[40ch]"
+        className="rounded-full outline-none duration-300 border-b-4 border-solid border-white focus:border-cyan-300 text-slate-900 p-3 w-full max-w-[40ch]"
       />
       <input
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         type="password"
         placeholder="Password"
-        className="outline-none duration-300 border-b-4 border-solid border-white focus:border-cyan-300 text-slate-900 p-3 w-full max-w-[40ch]"
+        className="rounded-full outline-none duration-300 border-b-4 border-solid border-white focus:border-cyan-300 text-slate-900 p-3 w-full max-w-[40ch]"
       />
       <button
         onClick={submitHandler}
@@ -61,7 +61,7 @@ export default function Login() {
           setIsLoginIn(!isLoginIn);
           setEmail("");
           setPassword("");
-          setError(null)
+          setError(null);
         }}
       >
         {!isLoginIn ? "Login" : "Register"}

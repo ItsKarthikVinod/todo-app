@@ -97,11 +97,11 @@ export default function UserDashboard() {
           placeholder="Enter todo"
           value={todo}
           onChange={(e) => setTodo(e.target.value)}
-          className="outline-none p-3 text-base sm:text-lg text-slate-900 flex-1"
+          className="outline-none p-3 text-base sm:text-lg text-slate-900 flex-1 rounded-full"
         />
         <button
           onClick={handleAddTodo}
-          className="w-fit px-4 sm:px-6 py-2 sm:py-3 bg-amber-400 text-white font-medium text-base duration-300 hover:opacity-40"
+          className=" rounded-full w-fit px-4 sm:px-6 py-2 sm:py-3 bg-amber-400 text-white font-medium text-base duration-300 hover:opacity-40"
         >
           ADD
         </button>
@@ -124,6 +124,7 @@ export default function UserDashboard() {
                 edittedValue={edittedValue}
                 setEdittedValue={setEdittedValue}
                 handleDelete={handleDelete}
+                
               >
                 {todos[todo]}
               </TodoCard>
