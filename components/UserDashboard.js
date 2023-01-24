@@ -4,6 +4,9 @@ import TodoCard from "./TodoCard";
 import { doc, setDoc, deleteField } from "firebase/firestore";
 import { db } from "../firebase";
 import useFetchTodos from "../hooks/fetchTodos";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { Router } from "next/router";
 
 export default function UserDashboard() {
   const { userInfo, currentUser } = useAuth();
@@ -39,6 +42,7 @@ export default function UserDashboard() {
       { merge: true }
     );
     setTodo("");
+
   }
 
   async function handleEditTodo() {
@@ -89,7 +93,20 @@ export default function UserDashboard() {
     };
   }
 
+  function sendProps(){
+    Router.push({
+      pathname: '/calendar',
+      query:{
+        newEvent
+      }
+    })
+  }
+
+  const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
+ 
+
   return (
+    
     <div className="w-full max-w-[65ch] text-xs sm:text-sm mx-auto flex flex-col flex-1 gap-3 sm:gap-5">
       <div className="flex items-stretch">
         <input
@@ -99,6 +116,7 @@ export default function UserDashboard() {
           onChange={(e) => setTodo(e.target.value)}
           className="outline-none p-3 text-base sm:text-lg text-slate-900 flex-1 rounded-full"
         />
+        
         <button
           onClick={handleAddTodo}
           className=" rounded-full w-fit px-4 sm:px-6 py-2 sm:py-3 bg-amber-400 text-white font-medium text-base duration-300 hover:opacity-40"
@@ -106,6 +124,7 @@ export default function UserDashboard() {
           ADD
         </button>
       </div>
+      
       {loading && (
         <div className="flex-1 grid place-items-center">
           <i className="fa-solid fa-spinner animate-spin text-6xl"></i>
@@ -124,7 +143,6 @@ export default function UserDashboard() {
                 edittedValue={edittedValue}
                 setEdittedValue={setEdittedValue}
                 handleDelete={handleDelete}
-                
               >
                 {todos[todo]}
               </TodoCard>

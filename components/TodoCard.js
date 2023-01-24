@@ -10,6 +10,7 @@ export default function TodoCard(props) {
     todoKey,
     handleEditTodo,
     handleDelete,
+    handleCheck
   } = props;
 
   return (
@@ -27,6 +28,7 @@ export default function TodoCard(props) {
         {/* {children} */}
       </div>
       <div className="flex items-center">
+        
         {edit === todoKey ? (
           <i
             onClick={handleEditTodo}
