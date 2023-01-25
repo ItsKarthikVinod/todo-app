@@ -4,7 +4,7 @@ function AboutUs() {
   return (
     <div>
       <h1 className="text-center text-3xl font-bold">About Us</h1>
-      <h1 className='text-xl my-10'>Hey There!</h1>
+      <h1 className="text-xl my-10">Hey There!</h1>
       <p>We are students studying in the 9th Grade</p>
       <p>We made this website because of our passion for IT.</p>
       <p>
@@ -15,12 +15,20 @@ function AboutUs() {
       <p>Thanks to Habitat for giving us this wonderful opportunity </p>
       <div class="social">
         <li>
-          <a href="https://www.youtube.com/@uptodate_todo " target="_blank">
+          <a
+            href="https://www.youtube.com/@uptodate_todo "
+            target="_blank"
+            rel="noreferrer"
+          >
             <i class="fa-brands fa-youtube youtube"></i>
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com/uptodate.todo/ " target="_blank">
+          <a
+            href="https://www.instagram.com/uptodate.todo/ "
+            target="_blank"
+            rel="noreferrer"
+          >
             <i class="fa-brands fa-instagram instagram"></i>
           </a>
         </li>
@@ -28,6 +36,7 @@ function AboutUs() {
           <a
             href="https://www.facebook.com/profile.php?id=100089417363276 "
             target="_blank"
+            rel="noreferrer"
           >
             <i class="fa-brands fa-facebook"></i>
           </a>
