@@ -5,7 +5,7 @@ export default function Footer() {
     <div className="flex justify-center items-center gap-3 py-3">
       
       <h1 className="text-sm sm:text-base ">
-        Established by Karthik Vinod and Syon Sumoj 😇 {" "}
+        Established by Karthik Vinod 😇 {" "}
       </h1>
     </div>
   );
